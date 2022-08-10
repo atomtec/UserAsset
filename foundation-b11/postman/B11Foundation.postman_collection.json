@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "56680dd4-74b3-4370-8833-149289381153",
+		"name": "B11Foundation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetCustomerByID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"firstName\": \"Lokesh\",\r\n    \"lastName\": \"Gupta\",\r\n    \"panNumber\": \"BCMPK\",\r\n    \"emailId\": \"howtodoinjava@gmail.com\",\r\n    \"address\": \"Googe Lane\",\r\n    \"phoneNumber\": \"9831645612\",\r\n    \"accounts\": []\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8081/api/v1/customer/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"customer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 0,\r\n    \"firstName\": \"Siyanat\",\r\n    \"lastName\": \"Sharma\",\r\n    \"panNumber\": \"BACGT\",\r\n    \"emailId\": \"test@gmail.com\",\r\n    \"address\": \"Gope Lane\",\r\n    \"phoneNumber\": \"9831645614\",\r\n    \"accounts\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/v1/customer",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTestUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/v1/testcreateuser",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"testcreateuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCustomerByID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 0,\r\n    \"firstName\": \"Siyanat\",\r\n    \"lastName\": \"Sharma\",\r\n    \"panNumber\": \"BACGT\",\r\n    \"emailId\": \"test2@gmail.com\",\r\n    \"address\": \"Gope Lane\",\r\n    \"phoneNumber\": \"9831645614\",\r\n    \"accounts\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/v1/customer/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"customer",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddAccountByID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  \r\n  {\r\n  \"id\": 0,\r\n  \"accounType\": \"CURRENT\",\r\n  \"accountHoldingType\": \"CORPORATE\",\r\n  \"balance\": 1000.0\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/v1/customer/2/account",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"customer",
+						"2",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateBalanceByAccNO",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"-50\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/v1/customer/2/account/104839277/balance",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"customer",
+						"2",
+						"account",
+						"104839277",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateAccountByID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \r\n            \"accounType\": \"CURRENT\",\r\n            \"accountHoldingType\": \"INDIVIDUAL\",\r\n            \"balance\": 5000.00\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/v1/customer/2/account/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"customer",
+						"2",
+						"account",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCustomerByID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"firstName\": \"Lokesh\",\r\n    \"lastName\": \"Gupta\",\r\n    \"panNumber\": \"BCMPK\",\r\n    \"emailId\": \"howtodoinjava@gmail.com\",\r\n    \"address\": \"Googe Lane\",\r\n    \"phoneNumber\": \"9831645612\",\r\n    \"accounts\": []\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8081/api/v1/customer/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"customer",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TransferAccount",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\r\n    \"cutsomerid\":3,\r\n\t\r\n    \"srcAccountid\":6,\r\n\t\r\n\t\"destAccountid\":5,\r\n\t\r\n\t\"transferAmount\":100.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/v1/customer/1/account/transfer",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"customer",
+						"1",
+						"account",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
